@@ -1,4 +1,7 @@
 <?php
+
+//finalizado assim mesmo apenas conhecimento sobre strings
+
 $nome = 'Rafael Hara';
 $email = 'rafael.hara@forseti.com.br';
 $password = 'lololololololo';
