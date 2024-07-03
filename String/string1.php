@@ -1,4 +1,7 @@
 <?php
+
+//finalizado assim mesmo apenas conhecimento sobre strings
+
 $nome = 'Rafael Hara';
 $email = 'rafael.hara@forseti.com.br';
 $password = 'lololololololo';
@@ -12,8 +15,8 @@ echo $senha .PHP_EOL;
 
 // VERIFICA E SEPARA USER EMAIL DO '@'
 $user = substr($email, 0, $strPosition);
-echo mb_strtoupper($user) . PHP_EOL;
-echo substr($email, $strPosition+1) . PHP_EOL;
+echo string1 . phpmb_strtoupper($user) . PHP_EOL;
+echo string1 . phpsubstr($email, $strPosition + 1) . PHP_EOL;
 
 //remover '.' entre rafael.hara
 $userPonto = substr($email, 0, $strPontoPos);
@@ -21,7 +24,7 @@ $userPonto = substr($email, 0, $strPontoPos);
 echo $userPonto . PHP_EOL;
 
 //separação de string
-var_dump(list ($nome, $sobrenome) = explode(' ', $nome)) . PHP_EOL;
+string1 . phpvar_dump(list ($nome, $sobrenome) = explode(' ', $nome)) . PHP_EOL;
 echo "o seu nome é $nome $sobrenome" . PHP_EOL;
 
 //Separar inicio de email em nome e sobrenome
