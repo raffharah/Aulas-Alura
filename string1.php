@@ -8,7 +8,7 @@ $strPontoPos = strpos($email, '.');
 
 //verifica tamanho de senha
 $senha = mb_strlen($password); // uso de mb_ para confirmar tamanho de byte de caracteres especiais
-echo $senha;
+echo $senha .PHP_EOL;
 
 // VERIFICA E SEPARA USER EMAIL DO '@'
 $user = substr($email, 0, $strPosition);
@@ -21,7 +21,7 @@ $userPonto = substr($email, 0, $strPontoPos);
 echo $userPonto . PHP_EOL;
 
 //separação de string
-var_dump(list ($nome, $sobrenome) = explode(' ', $nome));
+var_dump(list ($nome, $sobrenome) = explode(' ', $nome)) . PHP_EOL;
 echo "o seu nome é $nome $sobrenome" . PHP_EOL;
 
 //Separar inicio de email em nome e sobrenome
