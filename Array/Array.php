@@ -21,7 +21,23 @@ foreach ($nota as $desordem){
     echo $desordem . PHP_EOL;
 }
 //poderia ter criado um código apenas com o var_dump, mas tentei usar o echo por estar apresentando erro, e solução no momento encontrado 'foreach'
-    echo 'notas em ordem:' . PHP_EOL;
+echo 'notas em ordem:' . PHP_EOL;
 foreach ($ordemNota as $ordenado) {
     echo $ordenado . PHP_EOL;
 }
+
+//uso de usort para criar uma função para ordenar, usando comparação para ordenar, retornando 1 para posições a frente que devem estar atrás, 0 para numeros que irão ficar na mesma posição e -1 para posições que irão estar posições a frente
+$alunos = [
+    ['aluno'=> 'João', 'nota' => 1],
+    ['aluno'=> 'Maria', 'nota' => 10],
+    ['aluno' => "pé", 'nota' => 9],
+    ['aluno' => 'Feijão', 'nota' => 5]
+];
+
+function ordemNotas(array $nota1, array $nota2): int{
+    if ($nota1['nota'] > $nota2['nota']){
+        return 1;
+    }
+}
+
+
