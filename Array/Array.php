@@ -27,17 +27,28 @@ foreach ($ordemNota as $ordenado) {
 }
 
 //uso de usort para criar uma função para ordenar, usando comparação para ordenar, retornando 1 para posições a frente que devem estar atrás, 0 para numeros que irão ficar na mesma posição e -1 para posições que irão estar posições a frente
-$alunos = [
+$alunosA = [
     ['aluno'=> 'João', 'nota' => 1],
     ['aluno'=> 'Maria', 'nota' => 10],
     ['aluno' => "pé", 'nota' => 9],
     ['aluno' => 'Feijão', 'nota' => 5]
 ];
-
+echo 'nota dos alunos em ordem crescente' . PHP_EOL;
 function ordemNotas(array $nota1, array $nota2): int{
-    if ($nota1['nota'] > $nota2['nota']){
-        return 1;
-    }
+    return $nota1['nota'] <=> $nota2['nota'];
 }
 
+usort($alunosA, 'ordemNotas');
+var_dump($alunosA);
 
+echo 'nota dos alunos em ordem decrescente' . PHP_EOL;
+//array associativo com ordenação das notas simples
+$notas =[
+    'João' => 1,
+    'Maria' => 10,
+    'pé' => 9,
+    'Feijão' => 5
+];
+
+arsort($notas);
+var_dump($notas);
