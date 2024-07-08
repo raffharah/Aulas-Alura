@@ -52,3 +52,18 @@ $notas =[
 
 arsort($notas);
 var_dump($notas);
+
+// array_key_exists - verifica se a chave existe
+// in_array - verifica se o valor existe
+// isset - verifica se a chave existe e não é nula
+// array_search - verifica o array e retorna o primeiro valor da chave
+
+// uso do in_array para verificar o valor 10 existe retornando verdadeiro para execução do código
+$alunoDez = in_array(10, $notas);
+if ($alunoDez) //para verificar a existencia de um aluno com a nota desejada
+foreach ($notas as $aluno => $nota){ //inicia a busca pela nota 10
+    if ($nota == 10) //cria um statement para apenas alunos com nota 10 travando que exiba a mensagem para outros alunos
+       echo "parabens $aluno pela nota " . $nota . PHP_EOL;
+   } else { //dentro do foreach para poder percorrer o array, podendo pegar mais de um aluno com nota 10 caso exista
+    echo "nenhuma nota encontrada" . PHP_EOL;
+}
